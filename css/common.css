@@ -1,0 +1,172 @@
+@charset "utf-8";
+@import './font.css';
+/* 초기화 */
+* { box-sizing: border-box; }
+body, h1, h2, h3, h4, h5, h6, p, ul, dl, dd, input { margin: 0; padding: 0;  }
+li { list-style: none; }
+address { font-style: normal; }
+a { text-decoration: none; }
+.hidden { position: absolute; width: 1px; height: 1px;
+          margin-left: -1px; overflow: hidden;
+          clip: rect(0, 0, 0, 0); }
+/* 웹폰트 */
+body { font-family: 'GmarketSansLight'; }
+/* 헤더 */
+#header { overflow: hidden; position: fixed; top: 0; left: 0; z-index: 999;
+          width: 100%; height: 80px;          
+          display: flex; justify-content: center; 
+          font-family: 'GmarketSansMedium'; 
+          border-bottom: 1px solid #000;
+        }
+#header .logo { position: absolute; top: 25px; left: 50px; }
+.topMenu { position: absolute; top: 0; right: 0;
+          display: flex; }
+#language { margin: 13px 15px 0 0; }
+#language dd { width: 150px; height: 50px;
+              background: #fff; color: #000; 
+        }
+#language dd:first-of-type { border-radius: 10px; box-shadow: 3px 3px #000; }
+#language dd:not(:first-of-type) { display: none; }
+#language dd:nth-of-type(2) { }
+#language dd:nth-of-type(3) { }
+#language dd a { display: block; color: #000; line-height: 50px; 
+                text-align: right; padding-right: 30px; }
+.goFranchise { display: block; width: 200px; height: 50px; 
+               margin: 13px 30px 0 0;
+               background: #fff url(../images/icon_franchise.png) no-repeat 15px 50% / 40px ; 
+               color: #ac162c; 
+               border-radius: 10px; 
+               font-size: 20px; line-height: 55px;
+               text-indent: 70px; box-shadow: 3px 3px #000; 
+               transition: 0.3s; }
+.goFranchise:hover { background-color: #53e9d3; color: #000; 
+                    filter: invert(100%); }
+
+/* gnb */
+.gnbView { display: none; }
+#gnbList { display: flex; text-transform: uppercase; }
+#gnbList > li > a { padding: 0 30px; color: #000; font-size: 20px; 
+                    line-height: 80px; }
+.snb { text-align: center; padding: 20px 0; }
+.snb li { line-height: 40px; }
+.snb li a { color: #000; }
+/* 본문시작 */
+main > section { height: 100vh; min-height: 700px; }
+/* 이벤트 */
+#event { 
+        background: url(../images/bg_event.png) no-repeat calc(50% - 300px) calc(50% + 70px) / 1000px, 
+                    linear-gradient(45deg, #f7eedb 55%, #ffd0c7); 
+        /* background: linear-gradient(45deg, #f7eedb, #f5c281); */
+        display: flex; 
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+}
+#event dl { position: relative; top: 50px; transform: translateX(60%); }
+#event dl dt { padding-top: 30px; margin: 30px 0; 
+               line-height: 1em; font-size: 110px; 
+               font-family: 'GmarketSansBold'; }
+#event dl dt span { color: #f7eedb;
+                    text-shadow: 1px 0 #000,
+                                 0 1px #000,
+                                 -1px 0 #000,
+                                 0 -1px #000; }
+#event dl dd { margin-left: 10px; }
+#event dl dd:first-of-type { position: absolute; top: 0;
+                            padding-bottom: 5px;
+                            border-bottom: 1px solid #000;
+                            font-size: 24px; 
+                             }
+/* 모든 섹션 공통 */
+section h2, section h3 { text-transform: uppercase; }
+.goLink { display: block; width: 410px; height: 65px; 
+         background: #ac162c; color: #fff; 
+         /* font-family: 'GmarketSansMedium'; 
+         font-size: 20px;  
+         line-height: 67px; */
+         font: 20px / 67px 'GmarketSansMedium';
+         text-indent: 30px;
+        }
+/* store */
+#store { display: flex; }
+/* store 공통 */
+#store > section { width: 50%; height: 100vh; 
+                   display: flex;
+                   justify-content: center; 
+                   align-items: center; }
+.storeInner { position: relative; }
+#store h3 { }
+#store p { font-size: 70px; margin: 30px 0; }
+
+/* 신규매장 */
+#newStore { background: #ac162c; color: #fff; }
+#newStore .goLink { background: #000; }
+/* 매장찾기 */
+#storeSearch { background: #fff; }
+.storeName { width: 410px; height: 65px;  
+             border: 5px solid #ac162c; 
+             color: #ac162c; 
+             font: 20px / 67px 'GmarketSansMedium'; 
+             text-indent: 15px; }
+.storeName::placeholder { color: #ac162c;  }
+/* menu */
+#menu { 
+        background: url(../images/bg_menu.jpg) no-repeat center / cover;
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        }
+.menuInner { transform: translateX(-60%); }
+#menu h3 {  }
+#menu p { margin: 30px 0; font-size: 70px; color: #ac162c; }
+#menu p span { font-family: 'GmarketSansBold'; }
+/* 모바일쿠폰*/
+#coupon { display: flex; 
+          justify-content: center; 
+          align-items: center;
+          background: url(../images/bg_mobile.png) no-repeat left center, 
+                      url(../images/bg_mobile_pattern.gif);  }
+#coupon a { display: block; transform: translateX(60%);
+            text-align: right; color: #000; }
+#coupon a h2 { font-size: 18px; }
+#coupon a p { font-size: 70px; }   
+/* community */
+#community { background: #f2f2f5; }
+#community h2 { padding: 150px 0 30px 100px; font-size: 18px;  }
+#community p { padding: 0 0 50px 100px; font-size: 70px; }
+#communityList { display: flex; justify-content: space-evenly; }
+#communityList li { width: 19%; }
+#communityList li a { color: #000; }
+#communityList li a dl { position: relative; padding: 60px 20px 20px; 
+                         background: #fff; }
+#communityList li a dl dt { margin-bottom: 20px; font: 20px 'GmarketSansMedium'; }
+#communityList li a dl dd img { width: 100%; }
+#communityList li a dl dd.sns { position: absolute; top: 20px; left: 20px; }
+/* 채용정보 */
+#incruit { }
+#incruit p:first-of-type { }
+#incruit p:last-of-type { }
+#incruit p:last-of-type span { }
+/* 퀵메뉴 */
+#quickMenu { position: fixed; top: 200px; right: 50px; }
+#quickMenu ul li { width: 80px; height: 140px; padding-top: 80px; 
+                   border-radius: 10px; text-align: center; 
+                   font: 14px 'GmarketSansMedium'; }
+#quickMenu ul li.quick1 { background: #000; }
+#quickMenu ul li.quick2 { background: #ac162c; margin: 2px 0; }
+#quickMenu ul li.quick3 { background: #000; }
+#quickMenu ul li a { color: #fff; }
+/* 온라인신청 */
+.request { height: 80px; background: #ac162c; 
+           line-height: 100px; text-align: center; }
+.request a { color: #fff; font: 40px 'GmarketSansMedium'; }
+/* footer */
+#footer { padding: 50px 0; background: #282828; color: #ccc; 
+          display: flex; justify-content: space-around; }
+#footer ul { display: flex; }
+#footer ul li { }
+#footer ul li a { color: #fff; font-size: 12px; }
+#footer p { }
+#footer small { }
+#footer select { }
+#footer select option { }

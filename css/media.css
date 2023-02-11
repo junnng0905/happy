@@ -1,0 +1,70 @@
+/* 1400 이하 */
+@media screen and (max-width: 1400px) {
+  #language { }
+  #language dd { width: inherit; height: inherit;
+                background: transparent;  }
+  #language dd:first-of-type { box-shadow: 0 0 transparent; }
+  .goFranchise { width: inherit; height: inherit; 
+                background: none; box-shadow: 0 0 transparent; 
+                text-indent: 0; }
+  .goFranchise:hover { background: none; filter: none; }
+  #quickMenu { display: none; }  
+  #coupon { background: url(../images/bg_mobile_pattern.gif); }
+  #coupon a { transform: translateX(0); text-align: center; }
+}
+/* 1150 이하 */
+@media screen and ( max-width: 1150px ) {
+  #header { align-items: center;}
+  #header .logo { position: static; }
+  .gnbView {display: block; position: absolute; top:15px; left: 30px;
+            width: 50px; height: 50px;
+            display:flex; flex-direction: column;
+            justify-content: space-evenly; align-items: center;}
+  .gnbView span:not(.hidden), .gnbView::before , .gnbView::after{
+               content:""; display: block; width: 40px; 
+               border-top: 1px solid #000;}
+   #gnb { display: none; }
+  main > section { height: auto; min-height: auto;
+                 padding: 100px 0; }
+  #event { height: 900px; }
+  main > #store { padding: 0;  }
+  #store > section { height: auto; padding: 100px 0; }
+}
+/* 1050 이하 */
+@media screen and ( max-width: 1050px ) {
+  #event { background: url(../images/bg_event.png) no-repeat center 100px / 500px, 
+                      linear-gradient(45deg, #f7eedb 55%, #ffd0c7); }
+  #event dl { transform: translateX(0) translateY(100px); }
+  #menu { background: #f7eedb; }
+  .menuInner { transform: translateX(0); }
+  #communityList { flex-wrap: wrap; }
+  #communityList li { width: 32%; margin-bottom: 10px; }
+}
+/* 850 이하 */
+@media screen and ( max-width: 850px ) {
+  #store { flex-wrap: wrap; }
+
+  /*flex-direction: column;*/
+  #store > section {  width: 100%; }
+}
+/*511 이하*/
+@media screen and (min-width: 511px) {
+   .searchBtn {position: absolute;}
+}
+ /*510 이하*/
+@media screen and (max-width: 510px) {
+.topMenu {flex-direction: column;}
+#language{ margin: 10px 0 0 0;}
+#language dd a {line-height: 1em;}
+.goFranchise {margin: 0;}
+.goLink, .storeName { width: 100%; font-size: 4vw;}
+#event dl dt { font-size: 20vw;}
+#store p, #menu p, #coupon a p, #community p {font-size: 15vw;}
+.searchBtn {display: block; width: 50px; height: 50px;
+            margin: 0 auto;}
+#community h2 {padding: 30px;}
+#community p {padding: 0 20px 30px;}
+#communityList { flex-wrap: wrap;}
+#communityList li { width: 100%; margin-bottom: 10px;}
+}
+  
